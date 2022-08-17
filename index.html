@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div id="screen"></div>
+    <script type="module">
+import * as me from "https://esm.run/melonjs";
+
+me.device.onReady(function () {
+    // initialize the display canvas once the device/browser is ready
+    var width_center = screen.availWidth/2;
+    var width_height = screen.availHeight/2;
+    if (!me.video.init(screen.availWidth, screen.availHeight, {parent : "screen", scale : "auto"})) {
+        alert("Your browser does not support HTML5 canvas.");
+        return;
+    }
+
+    // add a gray background to the default Stage
+    me.game.world.addChild(new me.ColorLayer("background", "#000066"));
+
+    // add a font text display object
+    var emitter = new me.ParticleEmitter(width_center, width_height, {
+        width: 16,
+        height: 16,
+        tint: "#ff0000",
+        totalParticles: 1000,
+        angle: 0,
+        angleVariation: 18.9,
+        maxLife: 10,
+        speed: 1
+    })
+    me.game.world.addChild(emitter);
+    emitter.streamParticles();
+});
+    </script>
+
+</body>
+</html>
