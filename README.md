@@ -1,1 +1,0 @@
-# wise-adventures.github.io
