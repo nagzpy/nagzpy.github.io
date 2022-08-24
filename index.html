@@ -9,9 +9,9 @@ import * as me from "https://cdn.jsdelivr.net/npm/melonjs@13.1.1/dist/melonjs.mo
 
 me.device.onReady(function () {
     // initialize the display canvas once the device/browser is ready
-    var width_center = screen.availWidth/2;
-    var width_height = screen.availHeight/2;
-    if (!me.video.init(screen.availWidth, screen.availHeight, {parent : "screen", scale : "auto"})) {
+    var width_center = screen.Width/2;
+    var width_height = screen.Height/2;
+    if (!me.video.init(screen.Width, screen.Height, {parent : "screen", scale : "auto"})) {
         alert("Your browser does not support HTML5 canvas.");
         return;
     }
