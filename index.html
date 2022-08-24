@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onload="document.getElementsByTagName('canvas').style.margin = 0;">
+<html onload="">
 <head>
 </head>
 <body>
@@ -35,7 +35,12 @@ me.device.onReady(function () {
     })
     me.game.world.addChild(emitter);
     emitter.streamParticles();
-});
+    
+    function setcan(){
+    document.getElementsByTagName('canvas').style.margin = 0;
+    document.getElementsByTagName('canvas').style.padding = 0;
+}
+    );
     </script>
     
 </body>
