@@ -7,7 +7,7 @@
     
    
     
-    <script type="module" onload="setcan()">
+    <script type="module">
 import * as me from "https://cdn.jsdelivr.net/npm/melonjs@13.1.1/dist/melonjs.module.js";
 
 me.device.onReady(function () {
@@ -36,10 +36,6 @@ me.device.onReady(function () {
     me.game.world.addChild(emitter);
     emitter.streamParticles();
     
-    function setcan(){
-    document.getElementsByTagName('canvas').style.margin = 0;
-    document.getElementsByTagName('canvas').style.padding = 0;
-}
 });   
     </script>
     
